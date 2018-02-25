@@ -2,7 +2,7 @@ FROM alpine:3.7
 
 ENV APP_USER=elasticsearch
 ENV APP_HOME=/usr/share/elasticsearch
-ENV APP_VERSION=5.6.8
+ENV APP_VERSION=6.2.2
 
 RUN apk update && \
     apk upgrade && \
@@ -18,6 +18,7 @@ RUN wget "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${A
     rm -f /tmp/elasticsearch.tar.gz
 
 COPY conf ${APP_HOME}/config
+COPY bin /usr/share/elasticsearch/bin
 
 RUN chmod +x ${APP_HOME}/bin/elasticsearch && \
     chown -R elasticsearch:elasticsearch ${APP_HOME}

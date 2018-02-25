@@ -10,7 +10,7 @@ The docker container can be executed as follows:
 docker run -d \
            -p 9200:9200 \
            -p 9300:9300 \
-           -e ES_HEAP_SIZE=512m
+           -e ES_HEAP_SIZE=512m \
            mscatdk/rpi-elasticsearch:latest
 ```
 

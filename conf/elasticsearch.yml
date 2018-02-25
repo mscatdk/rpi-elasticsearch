@@ -1,2 +1,4 @@
 network.host: 0.0.0.0
 path.data: /usr/share/elasticsearch/data
+discovery.type: single-node
+bootstrap.system_call_filter: false
